@@ -1,0 +1,75 @@
+.register-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #e0f7df, #c8e6c9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.register-box {
+  background: #ffffff;
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 100, 0, 0.08);
+  max-width: 420px;
+  width: 100%;
+}
+
+.register-box h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2e7d32;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.register-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #1b3a1b;
+}
+
+.register-form input,
+.register-form select {
+  padding: 0.65rem 0.9rem;
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #c8e6c9;
+  background-color: #f9fdf9;
+  transition: border-color 0.3s ease;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  border-color: #66bb6a;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.register-form button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #2e7d32;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-form button:hover {
+  background-color: #1b5e20;
+  transform: scale(1.02);
+}
