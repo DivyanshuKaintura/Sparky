@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import { useState } from "react";
 
 export default function Login() {
@@ -45,4 +45,66 @@ export default function Login() {
             </div>
         </div>
     )
+}*/
+
+import React, { useState } from "react";
+import "./login.css";
+
+export default function Login() {
+  const [username, setUsername] = useState("");
+  const [role, setRole] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ username, role, password });
+    // Redirect to role-specific dashboard if needed
+  };
+
+  return (
+    <div className="login-container">
+      <div className="login-box">
+        <h1>Login to FreshTrack</h1>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <label>
+            Username:
+            <input
+              type="text"
+              value={username}
+              required
+              placeholder="Enter your username"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </label>
+
+          <label>
+            Role:
+            <select
+              value={role}
+              required
+              onChange={(e) => setRole(e.target.value)}
+            >
+              <option value="">Select your role</option>
+              <option value="Farmer">Farmer</option>
+              <option value="Admin">Admin</option>
+              <option value="NGO">NGO</option>
+            </select>
+          </label>
+
+          <label>
+            Password:
+            <input
+              type="password"
+              value={password}
+              required
+              placeholder="Enter your password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  );
 }
